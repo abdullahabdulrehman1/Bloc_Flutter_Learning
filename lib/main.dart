@@ -15,16 +15,34 @@ class MainApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => InternetBloc(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.purple[300],
+            leading: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [Icon(Icons.wifi), Icon(Icons.ac_unit_outlined)],
+            ),
+          ),
+          backgroundColor: Colors.teal,
           body: Center(
             child: BlocBuilder<InternetBloc, InternetState>(
               builder: (context, state) {
                 if (state is InternetGainedState) {
-                  return Text('Connected...');
+                  return Text(
+                    'Connected...',
+                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 29),
+                  );
                 } else if (state is InternetLostState) {
-                  return Text(' Not Connected...');
+                  return Text(
+                    ' Not Connected...',
+                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 29),
+                  );
                 } else {
-                  return Text(' Loading...');
+                  return Text(
+                    ' Loading...',
+                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 29),
+                  );
                 }
                 // Ret}urn the Text widget directly
               },

@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'dart:html';
+// import 'dart:html';
 
 import 'package:bloc_learning_tutorial/blocs/internetbloc/internet_event.dart';
 import 'package:bloc_learning_tutorial/blocs/internetbloc/internet_state.dart';
