@@ -27,8 +27,8 @@
 
 import 'dart:async';
 
-import 'package:bloc_learning_tutorial/blocs/internetbloc/internet_event.dart';
-import 'package:bloc_learning_tutorial/blocs/internetbloc/internet_state.dart';
+// import 'package:bloc_learning_tutorial/blocs/internetbloc/internet_event.dart';
+// import 'package:bloc_learning_tutorial/blocs/internetbloc/internet_state.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
